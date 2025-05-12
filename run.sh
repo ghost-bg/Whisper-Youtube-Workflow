@@ -34,7 +34,7 @@ fi
 if [ "$USE_CPU" = true ]; then
   DOCKERFILE="Dockerfile.cpu"
 else
-  DOCKERFILE="Dockerfile"
+  DOCKERFILE="Dockerfile.gpu"
 fi
 
 if [ -t 1 ]; then
@@ -44,7 +44,7 @@ else
     echo "[WARN] No TTY detected. Running without -it."
 fi
 
-echo "[INFO] Building Docker image..."
+echo "[INFO] Building Docker image from $DOCKERFILE..."
 docker build -f "$DOCKERFILE" -t "$IMAGE_NAME" .
 
 echo "[INFO] Starting container..."
