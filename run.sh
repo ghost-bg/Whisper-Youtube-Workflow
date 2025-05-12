@@ -31,6 +31,12 @@ else
     echo "[INFO] Using CPU mode."
 fi
 
+if [ "$USE_CPU" = true ]; then
+  DOCKERFILE="Dockerfile.cpu"
+else
+  DOCKERFILE="Dockerfile"
+fi
+
 if [ -t 1 ]; then
     TTY_FLAG="-it"
 else
