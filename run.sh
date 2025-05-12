@@ -28,7 +28,7 @@ if [ "$USE_CPU" = false ] && docker info | grep -q 'Runtimes: nvidia'; then
     echo "[INFO] NVIDIA GPU detected. Using GPU mode."
 else
     GPU_FLAG=""
-    USE_CPU = true
+    USE_CPU=true
     echo "[INFO] Using CPU mode."
 fi
 
