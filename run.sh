@@ -45,7 +45,7 @@ else
 fi
 
 echo "[INFO] Building Docker image..."
-docker build -t "$IMAGE_NAME" .
+docker build -f "$DOCKERFILE" -t "$IMAGE_NAME" .
 
 echo "[INFO] Starting container..."
 docker run --rm $GPU_FLAG -v "$PWD":/app -w /app $TTY_FLAG "$IMAGE_NAME" ./process_youtube.sh
