@@ -18,7 +18,7 @@ if ! command -v docker &> /dev/null; then
 fi
 
 if ! docker info | grep -q 'Runtimes: nvidia'; then
-    echo "[ERROR] NVIDIA Docker runtime not found or GPU not available."
+    echo "[WARNING] NVIDIA Docker runtime not found or GPU not available."
     echo "Please install NVIDIA Container Toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html"
 fi
 
@@ -26,4 +26,4 @@ echo "[INFO] Building Docker image..."
 docker build -t "$IMAGE_NAME" .
 
 echo "[INFO] Starting container..."
-docker run --rm --gpus all -v "$PWD":/app -w /app -it "$IMAGE_NAME" ./process_youtube.sh
+docker run --gpus all -it -v $(pwd):/app "$IMAGE_NAME"
