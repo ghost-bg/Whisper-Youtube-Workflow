@@ -20,7 +20,6 @@ fi
 if ! docker info | grep -q 'Runtimes: nvidia'; then
     echo "[ERROR] NVIDIA Docker runtime not found or GPU not available."
     echo "Please install NVIDIA Container Toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html"
-    exit 1
 fi
 
 echo "[INFO] Building Docker image..."
