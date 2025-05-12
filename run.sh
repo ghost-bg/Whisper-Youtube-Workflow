@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO_URL="https://github.com/ghost-bg/Whisper-Youtube-Workflow
+REPO_URL="https://github.com/ghost-bg/Whisper-Youtube-Workflow.git"
 REPO_DIR="Whisper-Youtube-Workflow"
 IMAGE_NAME="whisper-pipeline"
 
@@ -27,4 +27,4 @@ echo "[INFO] Building Docker image..."
 docker build -t "$IMAGE_NAME" .
 
 echo "[INFO] Starting container..."
-docker run --rm --gpus all -v "$PWD":/app -w /app -it "$IMAGE_NAME" ./process_youtube.sh"
+docker run --rm --gpus all -v "$PWD":/app -w /app -it "$IMAGE_NAME" ./process_youtube.sh
