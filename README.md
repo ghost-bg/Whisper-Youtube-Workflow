@@ -23,6 +23,11 @@ Then run manually
 ```
 docker run --gpus all -it -v $(pwd):/app whisper-pipeline
 ```
+or if on CPU
+
+```
+docker run -it -v $(pwd):/app whisper-pipeline
+```
 
 2. Edit the urls.txt file (one youtube link per line.)
 3. Inside the docker container, do
