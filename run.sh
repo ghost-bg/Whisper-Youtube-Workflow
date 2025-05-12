@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/ghost-bg/Whisper-Youtube-Workflow
-REPO_DIR="whisper-subtitle-pipeline"
+REPO_DIR="Whisper-Youtube-Workflow"
 IMAGE_NAME="whisper-pipeline"
 
 if [ ! -d "$REPO_DIR" ]; then
