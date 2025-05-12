@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO_URL="https://github.com/ghost_bg/whisper-subtitle-pipeline.git"
+REPO_URL="https://github.com/ghost-bg/Whisper-Youtube-Workflow
 REPO_DIR="whisper-subtitle-pipeline"
 IMAGE_NAME="whisper-pipeline"
 
